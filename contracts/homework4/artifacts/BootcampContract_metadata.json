@@ -63,7 +63,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"homework4/contracts/bootcamp.sol": "BootcampContract"
+			"contracts/homework4/bootcamp.sol": "BootcampContract"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -77,7 +77,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"homework4/contracts/bootcamp.sol": {
+		"contracts/homework4/bootcamp.sol": {
 			"keccak256": "0xed208b375ce55de2f9bd0c07b314aea5a3688e93b8b4f16832f1f5527a2d2e80",
 			"license": "None",
 			"urls": [
