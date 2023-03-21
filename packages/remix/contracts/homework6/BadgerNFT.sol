@@ -17,8 +17,6 @@ contract BadgerNFT is ERC721, Ownable {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
-        console.log(msg.sender);
-        console.log(to);
         return tokenId;
     }
 }
