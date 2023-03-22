@@ -1,3 +1,9 @@
-*node_modules
+// remix
 *npm
+
+//hardhat
+*node_modules
 *artifacts
+
+// foundry
+*out
