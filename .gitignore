@@ -7,3 +7,7 @@
 
 // foundry
 *out
+*cache
+*lib
+
+*.env
