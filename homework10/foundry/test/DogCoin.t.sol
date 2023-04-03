@@ -5,6 +5,7 @@ import "forge-std/Test.sol";
 import "../src/DogCoin.sol";
 
 contract DogCoinTest is Test {
+    event Transfer(address indexed from, address indexed to, uint256 amount);
     //Vm testVM = Vm(address(bytes20(uint160(uint256(keccak256('hevm cheat code'))))));
     DogCoin public dogcoin;
     uint256 private _totalSupply = 2000000;
@@ -43,5 +44,14 @@ contract DogCoinTest is Test {
     function testFailIncreaseFromNotOwner() public {
       vm.prank(address(1));
       dogcoin.increaseTotalSupply();
+    }
+
+    function testEventOnTransfer() public {
+      // enable event emit check
+      vm.expectEmit(true, true, false, true);
+      // define expect
+      emit Transfer(address(this),address(1), 1);
+      // call function with event
+      dogcoin.transfer(address(1), 1);
     }
 }
