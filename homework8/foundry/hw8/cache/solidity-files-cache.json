@@ -980,6 +980,64 @@
         }
       }
     },
+    "script/BadgerCoin.s.sol": {
+      "lastModificationDate": 1680362452077,
+      "contentHash": "f8f56747319908d220e505ac0646c206",
+      "sourceName": "script/BadgerCoin.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/Base.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/Script.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdChains.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdCheats.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdJson.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdMath.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdStorage.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdUtils.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/Vm.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/console.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/interfaces/IMulticall3.sol",
+        "src/BadgerCoin.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "BadgerCoinDeployment": {
+          "0.8.16+commit.07a7930e.Darwin.appleclang": "BadgerCoin.s.sol/BadgerCoinDeployment.json"
+        }
+      }
+    },
     "script/Counter.s.sol": {
       "lastModificationDate": 1679516646920,
       "contentHash": "0705c52104730a78aef4aa6694175c81",
