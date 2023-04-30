@@ -5,6 +5,7 @@ libs = ['lib']
 
 [rpc_endpoints]
 goerli = "${GOERLI_RPC_URL}"
+bnb = "${BNB_MAINNET_URL}"
 
 [etherscan]
 goerli = { key = "${ETHERSCAN_API_KEY}" }

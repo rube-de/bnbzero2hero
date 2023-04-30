@@ -11,7 +11,7 @@ contract DogCoinTest is Test {
     uint256 private _totalSupply = 2000000;
     function setUp() public {
        dogcoin = new DogCoin(address(this));
-       //emit log_named_address("deployer", address(this));
+       emit log_named_address("deployer", address(this));
     }
 
     function testInitialSupply() public {
