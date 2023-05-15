@@ -4,3 +4,6 @@
 [submodule "homework16/foundry/lib/pancake-smart-contracts"]
 	path = homework16/foundry/lib/pancake-smart-contracts
 	url = https://github.com/pancakeswap/pancake-smart-contracts
+[submodule "homework18/foundry/lib/pancake-smart-contracts"]
+	path = homework18/foundry/lib/pancake-smart-contracts
+	url = https://github.com/pancakeswap/pancake-smart-contracts
