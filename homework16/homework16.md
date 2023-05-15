@@ -9,3 +9,10 @@ Interacting with DeFi
   2. Impersonate an address such as this one : 0xffefE959d8bAEA028b1697ABfc4285028d6CEB10
   3. obtain some LEGO
   4. Interact with the router contract to swap some LEGO for BUSD by using the swap function
+
+
+  ## Install pancake contracts for foundry
+
+```
+forge install pancakeswap/pancake-smart-contracts
+```
