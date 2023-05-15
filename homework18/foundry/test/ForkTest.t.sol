@@ -27,7 +27,6 @@ contract ForkTest is Test {
     pancakeSwapRouter = IPancakeRouter02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
     BUSD = IERC20(0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56);
     WBNB = IERC20(0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c);
-    util = new PancakeSwapUtil();
   }
 
   function testChain() public {
@@ -71,30 +70,33 @@ contract ForkTest is Test {
     );
   }
 
+  function testUtilContract() public {
+    vm.selectFork(bnbFork);
+    util = new PancakeSwapUtil();
+    IPancakeRouter02 router = util.getRouter();
+    console.log(address(router));
+  }
+
   function testLargeSwap() public {
     vm.selectFork(bnbFork);
+    util = new PancakeSwapUtil();
+    util.approveERC20ToRouter(address(WBNB));
+    uint256 amount = 1000e18;
     vm.prank(bob);
-    uint256 amount = 1e18;
-    WBNB.approve(address(pancakeSwapRouter), amount);
+    WBNB.approve(address(util), amount);
     vm.prank(bob);
     util.SwapBnbBusd(amount, address(bob));
   }
 
   function testLargeSplitSwap() public {
     vm.selectFork(bnbFork);
+    util = new PancakeSwapUtil();
+    util.approveERC20ToRouter(address(WBNB));
+    uint256 amount = 1000e18;
     vm.prank(bob);
-    WBNB.approve(address(pancakeSwapRouter), 1e18);
-    address[] memory path = new address[](2);
-    path[0] = address(WBNB);
-    path[1] = address(BUSD);
+    WBNB.approve(address(util), amount);
     vm.prank(bob);
-    pancakeSwapRouter.swapExactTokensForTokens(
-      1e18,
-      2e10,
-      path,
-      address(bob),
-      block.timestamp+11
-    );
+    util.SwapBnbBusdSplit(amount, address(bob), 2);
   }
 
 }
