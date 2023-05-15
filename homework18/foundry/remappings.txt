@@ -1,0 +1,2 @@
+@openzeppelin/=lib/openzeppelin-contracts/
+@pancakeswap/=lib/pancake-smart-contracts/projects/exchange-protocol/contracts/
